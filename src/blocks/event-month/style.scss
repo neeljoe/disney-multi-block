@@ -1,0 +1,21 @@
+.runpartner-event-month {
+	margin: 0;
+}
+
+.runpartner-event-meta-label {
+	display: block;
+	font-size: 0.6875rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--wp--preset--color--accent-4);
+	margin-bottom: 4px;
+}
+
+.runpartner-event-month-text {
+	display: block;
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 500;
+	color: var(--wp--preset--color--contrast);
+	line-height: 1.3;
+}
