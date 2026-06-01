@@ -349,6 +349,7 @@ function rp_render_sidebar(string $taxonomy, string $current_region, string $cur
 	<?php if ($featured_id) :
 		$thumb_id    = get_post_thumbnail_id($featured_id);
 		$thumb_url   = $thumb_id ? wp_get_attachment_image_url($thumb_id, 'full') : '';
+		$caption     = $thumb_id ? wp_get_attachment_caption($thumb_id) : '';
 		$ftitle      = get_the_title($featured_id);
 		$flink       = get_permalink($featured_id);
 		$fdate       = get_post_meta($featured_id, '_rp_event_date', true);
@@ -382,6 +383,9 @@ function rp_render_sidebar(string $taxonomy, string $current_region, string $cur
 				</div>
 			</div>
 		</div>
+		<?php if (!empty($caption)) : ?>
+			<div class="wp-block-cover__image-credit"><?php echo esc_html($caption); ?></div>
+		<?php endif; ?>
 	</div>
 	<?php else : ?>
 	<div class="wp-block-cover alignfull post-hero is-light event-archive-hero event-archive-hero-fallback" style="min-height:50vh;padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--style--root--padding-left);padding-right:var(--wp--style--root--padding-right);background:linear-gradient(135deg,var(--wp--preset--color--base),var(--wp--preset--color--accent-3));">
