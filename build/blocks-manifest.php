@@ -133,15 +133,15 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
-	'event-hero-meta' => array(
+	'event-hero' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'runpartner/event-hero-meta',
+		'name' => 'runpartner/event-hero',
 		'version' => '0.1.0',
-		'title' => 'Event Hero Meta',
+		'title' => 'Event Hero',
 		'category' => 'widgets',
-		'icon' => 'calendar',
-		'description' => 'Display event date, location, and country for the hero area.',
+		'icon' => 'cover-image',
+		'description' => 'Display the event hero with title, subtitle, meta, and action buttons.',
 		'example' => array(
 			
 		),
