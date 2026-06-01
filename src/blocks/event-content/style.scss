@@ -41,6 +41,10 @@
 	gap: 8px;
 	margin-bottom: var(--wp--preset--spacing--30);
 
+	@media (max-width: 767px) {
+		margin-top: var(--wp--preset--spacing--20);
+	}
+
 	@media (min-width: 768px) {
 		flex-direction: column;
 		gap: 0;
