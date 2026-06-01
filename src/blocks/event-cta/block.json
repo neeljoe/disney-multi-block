@@ -1,12 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "runpartner/event-website",
+	"name": "runpartner/event-cta",
 	"version": "0.1.0",
-	"title": "Event Website",
+	"title": "Event CTA Buttons",
 	"category": "widgets",
-	"icon": "admin-links",
-	"description": "Display the event official website link from post meta.",
+	"icon": "button",
+	"description": "Display event website and registration buttons together.",
 	"example": {},
 	"supports": {
 		"html": false
