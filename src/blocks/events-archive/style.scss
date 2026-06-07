@@ -277,6 +277,7 @@
 	color: var(--wp--preset--color--contrast);
 	text-decoration: none;
 	border-radius: 6px;
+	background: var(--wp--preset--color--accent-7);
 	transition: background 0.15s ease, color 0.15s ease;
 
 	&:hover {
@@ -297,7 +298,8 @@
 	flex-shrink: 0;
 	transition: transform 0.25s ease;
 
-	.active & {
+	.active &,
+	.event-archive-sidebar-toggle[aria-expanded="true"] & {
 		transform: rotate(180deg);
 	}
 }

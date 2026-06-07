@@ -311,18 +311,26 @@ function rp_render_sidebar(string $taxonomy, string $current_region, string $cur
 				'order'      => 'ASC',
 			]);
 		?>
-			<a href="<?php echo esc_url(rp_region_url($base_url, $slug)); ?>"
-			   data-wp-on--click="actions.navigate"
-			   class="event-archive-sidebar-item <?php echo $is_active ? 'active' : ''; ?>">
+ 			<?php if (!empty($children)) : ?>
+			<button type="button"
+			   data-wp-on--click="actions.toggleRegion"
+			   data-region-slug="<?php echo esc_attr($slug); ?>"
+			   aria-expanded="<?php echo $is_active ? 'true' : 'false'; ?>"
+			   class="event-archive-sidebar-item event-archive-sidebar-toggle <?php echo $is_active ? 'active' : ''; ?>">
 				<span><?php echo esc_html($term->name); ?></span>
-				<?php if (!empty($children)) : ?>
 				<span class="event-archive-sidebar-chevron">
 					<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
 						<path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</span>
-				<?php endif; ?>
+			</button>
+			<?php else : ?>
+			<a href="<?php echo esc_url(rp_region_url($base_url, $slug)); ?>"
+			   data-wp-on--click="actions.navigate"
+			   class="event-archive-sidebar-item <?php echo $is_active ? 'active' : ''; ?>">
+				<span><?php echo esc_html($term->name); ?></span>
 			</a>
+			<?php endif; ?>
 			<?php if (!empty($children)) : ?>
 			<div class="event-archive-sidebar-children <?php echo $is_active ? 'expanded' : ''; ?>">
 				<div class="event-archive-sidebar-children-scroll">
