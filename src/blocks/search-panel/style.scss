@@ -1,0 +1,59 @@
+.wp-block-disney-search-panel.search-toggle-panel {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	transform: translateX(100%);
+	visibility: hidden;
+	pointer-events: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	transition: transform 0.6s cubic-bezier(0, 0, 0.2, 1),
+	            visibility 0s 0.6s;
+
+	&.is-open {
+		transform: translateX(0);
+		visibility: visible;
+		pointer-events: auto;
+		transition: transform 0.6s cubic-bezier(0, 0, 0.2, 1),
+		            visibility 0s 0s;
+	}
+}
+
+.search-panel-inner {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 16px 24px;
+	max-width: 1280px;
+	margin: 0 auto;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.search-panel-icon {
+	display: flex;
+	align-items: center;
+	color: inherit;
+	flex-shrink: 0;
+}
+
+.search-panel-form {
+	flex: 1;
+	display: flex;
+}
+
+.search-panel-input {
+	width: 100%;
+	border: none;
+	background: transparent;
+	font-size: 1em;
+	padding: 8px 0;
+	color: inherit;
+	outline: none;
+
+	&::placeholder {
+		color: currentColor;
+		opacity: 0.5;
+	}
+}

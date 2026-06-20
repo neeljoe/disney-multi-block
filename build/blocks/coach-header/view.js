@@ -1,1 +1,0 @@
-import{getContext as t,store as e}from"@wordpress/interactivity";e("runpartner",{actions:{toggleCoachSection(){const e=t();e.isOpen=!e.isOpen}}});
