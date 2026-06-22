@@ -16,6 +16,26 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+/**
+ * Adds a custom template part area for mega menus to the list of template part areas.
+ *
+ * @param array $areas Existing array of template part areas.
+ * @return array Modified array of template part areas including the new "Menu" area.
+ */
+function amb_sites_dropdown_template_part_areas( array $areas ) {
+	$areas[] = array(
+		'area'        => 'menu',
+		'area_tag'    => 'div',
+		'description' => __( 'Menu template parts are used to create mega menu dropdowns.', 'advanced-multi-block' ),
+		'icon'        => '',
+		'label'       => __( 'Menu', 'advanced-multi-block' ),
+	);
+
+	return $areas;
+}
+add_filter( 'default_wp_template_part_areas', 'amb_sites_dropdown_template_part_areas' );
+
 /**
  * Registers the block(s) metadata from the `blocks-manifest.php` and registers the block type(s)
  * based on the registered block metadata. Behind the scenes, it registers also all assets so they can be enqueued
