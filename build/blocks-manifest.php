@@ -45,20 +45,37 @@ return array(
 		'render' => 'file:./render.php',
 		'viewScriptModule' => 'file:./view.js'
 	),
-	'toggle' => array(
+	'sites-dropdown' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/toggle',
+		'name' => 'disney/sites-dropdown',
 		'version' => '0.1.0',
-		'title' => 'Toggle',
+		'title' => 'Sites Dropdown',
 		'category' => 'widgets',
-		'icon' => 'media-interactive',
-		'description' => 'An interactive block with the Interactivity API.',
+		'icon' => 'menu',
+		'description' => 'A mega menu dropdown for the SITES navigation item. Uses the Interactivity API.',
 		'example' => array(
 			
 		),
+		'attributes' => array(
+			'label' => array(
+				'type' => 'string',
+				'default' => 'SITES'
+			),
+			'menuSlug' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
 		'supports' => array(
-			'interactivity' => true
+			'interactivity' => true,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true
+			)
+		),
+		'parent' => array(
+			'core/navigation'
 		),
 		'textdomain' => 'advanced-multi-block',
 		'editorScript' => 'file:./index.js',

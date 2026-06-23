@@ -1,0 +1,1 @@
+import{getContext as e,store as s}from"@wordpress/interactivity";s("disney-sites",{actions:{toggleMenu(){const s=e();s.isMenuOpen=!s.isMenuOpen},closeMenu(){e().isMenuOpen=!1}}});

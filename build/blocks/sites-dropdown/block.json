@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "disney/sites-dropdown",
+  "version": "0.1.0",
+  "title": "Sites Dropdown",
+  "category": "widgets",
+  "icon": "menu",
+  "description": "A mega menu dropdown for the SITES navigation item. Uses the Interactivity API.",
+  "example": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "SITES"
+    },
+    "menuSlug": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "interactivity": true,
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    }
+  },
+  "parent": [
+    "core/navigation"
+  ],
+  "textdomain": "advanced-multi-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScriptModule": "file:./view.js"
+}
